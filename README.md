@@ -27,31 +27,32 @@ The application processes user queries in two main ways:
 
 Below is a simplified flow diagram illustrating how a user query is processed:
 
-```mermaid
-flowchart TD
-    A[User Input]
-    B[Flask App (app.py)]
-    C[BotInterface.process_query(query)]
-    D{Is a Location Detected?}
-    E[Extract Location from Query]
-    F[Fetch & Update Weather Data]
-    G[Call RAGSystem.retrieve(query, weather)]
-    H[Construct prompt: "Pick one crop..." ]
-    I[Call ModelInference.infer(prompt)]
-    J[Return Combined Response (Weather, RAG, Crop Suggestion)]
-    K[Construct friendly chat prompt]
-    L[Call ModelInference.infer(prompt)]
-    M[Return Friendly Chat Response]
+<pre> 
+```mermaid flowchart TD
+A[User Input]
+B[Flask App (app.py)] 
+C[BotInterface.process_query(query)] 
+D{Is a Location Detected?} 
+E[Extract Location from Query] 
+F[Fetch & Update Weather Data] 
+G[Call RAGSystem.retrieve(query, weather)] 
+H[Construct prompt: "Pick one crop..." ] 
+I[Call ModelInference.infer(prompt)] 
+J[Return Combined Response (Weather, RAG, Crop Suggestion)] 
+K[Construct friendly chat prompt] 
+L[Call ModelInference.infer(prompt)] 
+M[Return Friendly Chat Response] 
 
-    A --> B
-    B --> C
-    C --> D
-    D -- Yes --> E
-    E --> F
-    F --> G
-    G --> H
-    H --> I
-    I --> J
-    D -- No --> K
-    K --> L
-    L --> M
+A --> B 
+B --> C 
+C --> D 
+D -- Yes --> E 
+E --> F 
+F --> G 
+G --> H 
+H --> I 
+I --> J 
+D -- No --> K 
+K --> L 
+L --> M 
+``` </pre>
