@@ -1,0 +1,8 @@
+{
+    "name": "Rice",
+    "weather_preferences": {
+        "temperature": {"min": 20, "max": 37},
+        "humidity": {"min": 70, "max": 100}
+    },
+    "fertilizers": ["Urea", "Phosphorus"]
+}

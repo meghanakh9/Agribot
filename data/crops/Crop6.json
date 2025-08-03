@@ -1,0 +1,8 @@
+{
+    "name": "Cotton",
+    "weather_preferences": {
+        "temperature": {"min": 15, "max": 35},
+        "humidity": {"min": 30, "max": 60}
+    },
+    "fertilizers": ["Nitrogen", "Potassium"]
+}
