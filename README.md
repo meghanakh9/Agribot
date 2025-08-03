@@ -28,7 +28,9 @@ The application processes user queries in two main ways:
 Below is a simplified flow diagram illustrating how a user query is processed:
 
 <pre> 
-```mermaid flowchart TD
+```markdown
+```mermaid 
+flowchart TD
 A[User Input]
 B[Flask App (app.py)] 
 C[BotInterface.process_query(query)] 
